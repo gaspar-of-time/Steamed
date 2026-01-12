@@ -10,13 +10,13 @@ TitleEdgeLeft=5
 TitleEdgeRight=4
 TitleEdgeBottom=1
 
-TitleEdgeTopMaximized=-1
+TitleEdgeTopMaximized=1
 TitleEdgeBottomMaximized=1
 
-ButtonWidth=18
+ButtonWidth=19
 ButtonSpacing=0
 
-ButtonHeight=18
+ButtonHeight=19
 
 ButtonMarginTop=1
 
