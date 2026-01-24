@@ -43,7 +43,6 @@ FocusScope {
     property string backgroundHover: ""
     property string backgroundPressed: ""
     property Component rowDelegate: defaultRowDelegate
-    property string toolTipText4: textConstants.session
 
     signal valueChanged(int id)
 
@@ -71,13 +70,10 @@ FocusScope {
     width: 80
     height: 30
     onFocusChanged: {
-        if (!container.activeFocus) {
+        if (!container.activeFocus)
             close(false);
-        }
+
     }
-    ToolTip.text: toolTipText4
-    ToolTip.delay: 500
-    ToolTip.visible: toolTipText4 ? mouseArea.containsMouse : false
     Keys.onPressed: (event) => {
         if (event.key === Qt.Key_Up) {
             listView.decrementCurrentIndex();
@@ -184,14 +180,14 @@ FocusScope {
         anchors.fill: container
         hoverEnabled: true
         onEntered: {
-            if (main.state == "") {
+            if (main.state == "")
                 main.state = "hover";
-            }
+
         }
         onExited: {
-            if (main.state == "hover") {
+            if (main.state == "hover")
                 main.state = "";
-            }
+
         }
         onClicked: {
             container.focus = true;
